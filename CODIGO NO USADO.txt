@@ -1,0 +1,167 @@
+<body> 
+        <div class="respon">
+    <header class="cabeza">
+        <div class="logo">
+            <img src="img/mascotaslogo01.png" alt="loguillo" class="logo-img">
+        </div>
+        <input type="checkbox" id="boton-menu">
+            <!--<label for="boton-menu"> <img src="./img/icon3.png" alt=""> </label>-->
+                    <nav class="menu">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./servicios.html">Quienes Somos</a></li>
+                    <li><a href="./form.html">Servicios</a></li>
+                    <li><a href="#">Petshop</a></li>
+                    <li><a href="#">Contactanos</a></li>                             
+                </ul>             
+                    </nav>
+        </div>
+    </header> 
+    <!-- SLIDER -->
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <img src="img/SLIDER01.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/SLIDER02.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/aaa.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/aaaa.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/e.png" alt="" class="slider__img">
+                </div>
+            </div>
+        
+
+        <!-- Lista de productos preview -->
+            <div class="page-content">
+                <div class="product-container">
+                    <h3 class="tituloproductos">Casa para gato</h3>
+                    <img src="img/p1.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-1', 150)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">Juguete Pelota</h3>
+                    <img src="img/p2.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-2', 20)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">JUGUETE 2X</h3>
+                    <img src="img/p3.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-3', 30)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">LET'S BITE</h3>
+                    <img src="img/p4.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-4', 20)">Agregar al carrito</button>
+                </div>
+                <div class="product-container">
+                    <h3 class="tituloproductos">LET'S BITE</h3>
+                    <img src="img/p5.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-5', 20)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">LET'S BITE</h3>
+                    <img src="img/p6.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-6', 20)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">ACCESORIO</h3>
+                    <img src="img/p7.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-7', 50)">Agregar al carrito</button>
+                </div>
+
+                <div class="product-container">
+                    <h3 class="tituloproductos">OBJECT</h3>
+                    <img src="img/p8.jpg" alt="">
+                    <h3 class="precioproducto">S/20</h3>
+                    <button class="button-add" onclick="add('product-8', 50)">Agregar al carrito</button>
+                </div>
+            </div>
+
+
+
+<!--SERVICIOS-->
+      <!--<section class="container-fluid">
+        <div class="servicios my-5" id="servicio">
+            <h1>
+              Servicios
+            </h1>
+        </div>
+        <div class="row w-75 mx-auto my-5 servicio-fila">
+          <div class="maincaja col-lg-6 col-md-12 col-sm-12
+          d-flex justify-content-start">
+              <img src="/img/ENGREIDOS01.png" alt="Servi01" class="IMG00">
+              <div id="caja01">
+                <h3 class="">
+                  Peluqueria / Estetica
+                </h3>
+                <p class="px-4">
+                  Para Perros, Gatos y Conejos. Las peluquerías son una forma estupenda 
+                  de brindar a nuestra mascota los cuidados higiénicos que necesita. Ven y conoce cómo trabajamos.
+                </p>
+              </div>
+          </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12
+            d-flex justify-content-center">
+              <img src="/img/ENGREIDOS02.png" alt="Servi01" class="IMG00">
+              <div>
+                <h3 class="">
+                  Medicina General
+                </h3>
+                <p class="px-4">
+                  Nuestra clínica ofrece servicios de medicina general con el objetivo de que tu mascota 
+                  siempre cuente con un bienestar físico y mental durante la exploración y diagnóstico.
+                </p>
+              </div>
+          </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12
+            d-flex justify-content-start">
+              <img src="/img/ENGREIDOS03.png" alt="Servi01" class="IMG00">
+              <div>
+                <h3 class="">
+                  Asistencia Medica
+                </h3>
+                <p class="px-4">
+                  Estamos muy bien equipados, ello nos permite realizar consultas veterinarias, vacunas, 
+                  tratamientos, cirugías mayores de alta complejidad, servicios 
+                  que aseguran el bienestar de su mascota.
+                </p>
+              </div>
+          </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12
+            d-flex justify-content-start">
+              <img src="/img/ENGREIDOS04.png" alt="Servi01" class="IMG00">
+              <div>
+                <h3 class="">
+                  Aseo de Mascotas
+                </h3>
+                <p class="px-4">
+                  Es importante una rutina de baño, que incorpore el agua y el shampo medicado. 
+                  Se trata de un hábito esencial para cuidar de su higiene, que ayuda al animal a eliminar 
+                  malos olores y a mantener su pelaje y piel sanos.
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>-->
