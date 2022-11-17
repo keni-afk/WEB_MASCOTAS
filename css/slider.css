@@ -4,20 +4,20 @@
 }
 
 .container-slider {
-width: 100%;
+width: 1000px;
 max-width: auto;
 margin: auto;
 overflow: hidden;
-box-shadow: 0 0 0 2px rgb(255, 255, 255),
-            0 15px 50px;
+
+
 
 /*position: relative;*/
 }
 .slider {
 display: flex;
-width: 500%;
-height: 600px;
-margin: auto;
+width: 300%;
+height: 400px;
+margin: 0;
 }
 
 .slider__section{
