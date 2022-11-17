@@ -2,6 +2,7 @@ body {
     /*background-color:#7DD174;*/
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
     /*font-family: 'Schoolbell' , cursive;*/
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 
@@ -237,6 +238,55 @@ button {
 .IMG00 {
     width: 300px;
     height: 280px;
+}
+/* TARJETA SERVICIOS */
+
+.container-galeria{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    background-color: #ffefdb;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translate(-3%);
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a
+}
+.card .contenido h3{
+    font-weight: 550;
+    margin-bottom: 15px;
+}
+.card .contenido a{
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #454546;
+    border: 2px solid #454546;
+    border-radius: 4px;
+    transition: all 400ms ease;
 }
 
 /* footer-pie de pagina */
