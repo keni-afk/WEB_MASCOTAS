@@ -200,12 +200,16 @@ header{
     letter-spacing: 1px;
 }
 #imagenprincipal{
+    width: auto;
+    height: 400px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    border-radius: 100px;
+    
 }
 
 /* TARJETA SERVICIOS */
