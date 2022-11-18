@@ -28,7 +28,7 @@
               <li><a href="">ROPA</a></li>
             </ul>
           </li>
-          <li><a href="servicios.html" target="blank">Servicios</a></li>
+          <li><a href="#Ser" target="blank">Servicios</a></li>
           <li><a href="contatanos.html" target="blank">Contactanos</a></li>
          <!-- <li><a href="#" target="blank">Login</a></li>
           <li><a href="#" target="blank">Registro</a></li>-->
