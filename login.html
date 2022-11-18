@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyA-r8uUWnPNjSbSPjXFVUfC4Tbn6HyjPRs",
+        authDomain: "fms-peru-fire-base-tienda.firebaseapp.com",
+        projectId: "fms-peru-fire-base-tienda",
+        storageBucket: "fms-peru-fire-base-tienda.appspot.com",
+        messagingSenderId: "339790372709",
+        appId: "1:339790372709:web:a5aa5b8237506c38320b8c",
+        measurementId: "G-GCMX859SLQ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    
+      firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+          var displayname = user.displayname;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          if (emailVerified === false) {
+              textVer = "- Correo no verificado";
+          } else {
+              textVer = "- Correo verificado";
+          }
+          console.log(user);
+          document.getElementById('login').innerHTML = `<p>estas logeado con el correo ` + user.email + ` ` + textVer +
+            `<p> <button onclick="cerrarSesion()">Cerrar Sesión</button>`;
+                console.log(user);
+      } else {
+          document.getElementById('login').innerHTML = "No estas logeado ";
+      }
+    });
+    
+      function registrar() {
+    
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    
+    //  "alerta para verificar email y constraseña OJO PIROBO"
+    //  alert("email: "+ email + " / password: " + password);
+    
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+    // Signed in
+    var user = userCredential.user;
+    // ...
+    })
+    .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert(errorMessage);
+    
+    // ..
+    })
+    .then(function(){
+        verificarCorreo();
+    });
+    }
+    
+    function ingreso() {
+        var email2 = document.getElementById('email2').value;
+        var password2 = document.getElementById('password2').value;
+    //alert("email: "+ email + " / password: " + password)
+        firebase.auth().signInWithEmailAndPassword(email2, password2)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert(errorMessage);
+      });
+    }
+    function verificarCorreo(){
+        firebase.auth().currentUser.sendEmailVerification()
+        .then(() => {
+            //Email verification sent!
+        });
+    }
+    
+    function cerrarSesion() {
+        firebase.auth().signOut()
+        .then(function () {
+            console.log('salir');
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+    }
+    </script>
+        <script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
+
